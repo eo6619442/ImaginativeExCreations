@@ -709,20 +709,27 @@ body {
         min-width: auto;
         max-width: none;
     }
-}
-
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
+    
+    .about-section{
+        height: 1006px;
+        bottom: 0;
+        margin-bottom: 50px;
     }
 
-    .footer-links,
-    .footer-social {
-        min-width: auto;
-        max-width: none;
+    .about {
+        padding: 20px;
+        display: block;
+    }
+
+    .about .about-content {
+        display: block;
+        padding: 0;
+    }
+
+    .about .about-content h2 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+        text-align: center;
+        
     }
 }
 
