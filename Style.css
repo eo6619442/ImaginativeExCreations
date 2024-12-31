@@ -79,7 +79,7 @@ body {
 .cta-btn {
     background-color: var(--accent-color);
     color: var(--primary-color);
-    padding: 18px 30px;
+    padding: 25px 40;
     border: none;
     border-radius: 5px;
     cursor: pointer;
