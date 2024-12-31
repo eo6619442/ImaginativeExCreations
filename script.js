@@ -1,74 +1,70 @@
-// Toggle the menu when clicking on the hamburger icon
+// Toggle Hamburger Menu
 function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelector('.nav-links');
-    const hamburger = document.querySelector('.hamburger');
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
+    navbar.classList.toggle('active');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 }
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        window.scrollTo({
-            top: target.offsetTop - 80, // Adjust for navbar height
-            behavior: 'smooth',
-        });
-    });
-});
+// View Works Modal
+const worksData = {
+    "graphic-design": ["work1.jpg", "work2.jpg", "work3.jpg"],
+    "branding": ["brand1.jpg", "brand2.jpg"],
+    "motion-graphics": ["motion1.jpg", "motion2.jpg"],
+    "web-development": ["web1.jpg", "web2.jpg"],
+};
 
-// Form validation and submission
-document.querySelector('#contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+function viewWorks(service) {
+    const modal = document.getElementById('works-display');
+    const worksContainer = document.getElementById('works-container');
+    const worksTitle = document.getElementById('works-title');
 
-    const name = document.querySelector('input[name="name"]').value.trim();
-    const email = document.querySelector('input[name="email"]').value.trim();
-    const message = document.querySelector('textarea[name="message"]').value.trim();
+    worksTitle.innerText = service.replace("-", " ").toUpperCase();
+    worksContainer.innerHTML = worksData[service]
+        .map(image => `<img src="${image}" alt="${service} work" style="width: 100px; margin: 10px;">`)
+        .join("");
 
-    // Validate inputs
+    modal.style.display = 'flex';
+}
+
+// Close Modal
+function closeWorks() {
+    const modal = document.getElementById('works-display');
+    modal.style.display = 'none';
+}
+
+// Contact Form Validation
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    const name = document.querySelector('[name="name"]').value.trim();
+    const email = document.querySelector('[name="email"]').value.trim();
+    const message = document.querySelector('[name="message"]').value.trim();
+
     if (!name || !email || !message) {
-        alert('All fields are required!');
-        return;
+        alert('Please fill in all fields.');
+        event.preventDefault();
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+        alert('Please enter a valid email address.');
+        event.preventDefault();
     }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert('Please enter a valid email address!');
-        return;
-    }
-
-    // Send data to server (e.g., via AJAX)
-    const formData = new FormData(this);
-    fetch('contact-handler.php', {
-        method: 'POST',
-        body: formData,
-    })
-        .then(response => {
-            if (response.ok) {
-                alert('Your message has been sent successfully!');
-                this.reset(); // Clear the form
-            } else {
-                alert('Something went wrong. Please try again later.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error submitting the form.');
-        });
 });
 
-// Back-to-top button functionality
+// Back to Top Button
 const backToTopButton = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) {
         backToTopButton.style.display = 'block';
     } else {
         backToTopButton.style.display = 'none';
     }
 });
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-    });
+backToTopButton.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Close Modal When Clicking Outside
+window.addEventListener('click', function (event) {
+    const modal = document.getElementById('works-display');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
 });
