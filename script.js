@@ -38,3 +38,12 @@ window.addEventListener('click', function (e) {
         worksModal.style.display = "none";
     }
 });
+
+// Get the hamburger menu and the navbar
+const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar ul');
+
+// Toggle the 'active' class to show or hide the menu
+hamburger.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+});
