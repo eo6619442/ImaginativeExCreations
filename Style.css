@@ -697,42 +697,7 @@ body {
     color: #aaa;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links,
-    .footer-social {
-        min-width: auto;
-        max-width: none;
-    }
-    
-    .about-section{
-        height: 1006px;
-        bottom: 0;
-        margin-bottom: 50px;
-    }
-
-    .about {
-        padding: 20px;
-        display: block;
-    }
-
-    .about .about-content {
-        display: block;
-        padding: 0;
-    }
-
-    .about .about-content h2 {
-        font-size: 2rem; /* Adjust heading size for mobile */
-        text-align: center;
-        
-    }
-}
-
+ 
 
 /* Animations */
 @keyframes bounce {
@@ -889,4 +854,108 @@ a:hover {
 #back-to-top:hover {
     background-color: #78716e; /* Slightly darker accent */
     color: #eae2e2; /* Change text color for hover */
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    /* Adjust Navbar */
+    .navbar {
+        position: absolute;
+        flex-direction: row;
+        padding: 20px;
+        justify-content: space-around;
+        width: 90vw;
+
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Adjust Profile Image in Hero Section */
+    
+    .hero .hero-content {
+        padding: 20px;
+    }
+
+    .hero img {
+        width: 60%;
+        height: auto;
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 50px 10px;
+        height: auto;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+            }
+
+    .about-left, .about-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-left img {
+        width: 100%;
+        margin-bottom: 20px;
+        clip-path: circle(90px);
+        margin-bottom: -100px;
+        margin-top: -50px;
+    }
+
+    .skill-cta {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        margin-top: 50px;
+
+    }
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack the services vertically */
+    }
+
+    .service-card {
+        margin-bottom: 30px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links, .footer-social {
+        min-width: auto;
+        max-width: none;
+    }
+
+    /* Back to Top Button */
+    #back-to-top {
+        bottom: 30px;
+        right: 30px;
+    }
 }
