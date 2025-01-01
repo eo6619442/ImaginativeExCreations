@@ -1,1040 +1,207 @@
-/* General Styles */
-:root {
-    --primary-color: #152238; /* Dark Blue */
-    --accent-color: #efe757; /* Dark Golden Orange */
-    --light-color: #f9f9f9;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
 
-html {
-    scroll-behavior: smooth;
-}
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="Style.css"> <!-- Main stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
+
+    <link rel="stylesheet" href="Style.css?v=1">
+<script src="script.js?v=1"></script>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="IEC-01.svg" alt="logo" height="80px">
+        </div>
+        <ul class="nav-links">
+            <!-- Navigation Links -->
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#services"><i class="fas fa-briefcase"></i> Services</a></li>
+            <li><a href="#myworks"><i class="fas fa-palette"></i> My Works</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <!-- Hire Me CTA -->
+        <div class="cta">
+            <a href="tel:+233592129882" class="cta-btn" id="hire-me" style="padding: 15px;">Hire Me</a>
+        </div>
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <!-- Profile Picture -->
+            <img src="PIC.png" alt="Your Profile" class="profile-img">
+            <!-- Hero Text -->
+            <h1>Welcome, I'm <b style="color: #efe757;"> Emmanuel</b></h1>
+            <p>Web Developer | Designer | Editor</p>
+            <!-- Explore My Works Button -->
+            <div class="cta">
+                <button class="cta-btn" style="margin-top: 40px;">Explore My Works</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="about-container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <!-- About Me Section -->
+            <div class="about-text">
+              <h3>Who I Am</h3>
+              <p>
+                Hello! I’m [Your Name], a passionate and dedicated graphic designer, web developer, and motion graphics artist. My goal is to create stunning, functional designs that resonate with audiences and elevate brands.
+              </p>
+              <p>
+                With a knack for innovation and attention to detail, I turn ideas into reality, whether it's through captivating visuals or interactive web experiences. Let's craft something extraordinary together!
+              </p>
+            </div>
+      
+            <!-- Personal Details -->
+            <div class="personal-details">
+              <h3>Personal Details</h3>
+              <ul>
+                <li><span class="icon">&#128100;</span><strong>Name:</strong>Emmanuel Owusu</li>
+                <li><span class="icon">&#127968;</span> <strong>Location:</strong> Buokrom Estate / Kumasi</li>
+                <li><span class="icon">&#128231;</span> <strong>Email:</strong> eo6619442@gmail.com</li>
+                <li><span class="icon">&#128222;</span> <strong>Phone:</strong> +233 592 129 882</li>
+              </ul>
+            </div>
+      
+            <!-- Interests Section -->
+            <div class="interests">
+              <h3>My Interests</h3>
+              <p>
+                I’m a lover of design and creativity, but when I’m not at my desk, you’ll find me exploring new places, experimenting with photography, or diving into music that inspires my work.
+              </p>
+            </div>
+      
+            <!-- Achievements Section -->
+            <div class="achievements">
+              <h3>Achievements</h3>
+              <ul>
+                <li><span class="icon">&#127942;</span> <strong>Award-Winning Designs:</strong> Recognized for innovative branding concepts.</li>
+                <li><span class="icon">&#127891;</span> <strong>Certified Expert:</strong> Advanced training in web development and motion graphics.</li>
+                <li><span class="icon">&#128079;</span> <strong>Happy Clients:</strong> Over 20 projects completed with excellent feedback.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+   <!-- Services Section -->
+<section id="services" class="services-section">
+    <h2 class="section-title">My Services</h2>
+    <div class="services-grid">
+        <!-- Service Cards -->
+        <div class="service-card" data-service="graphic-design" style="background-image: url('https://th.bing.com/th?id=OIP.DKEsCg_50o9VDCaweDhGvgHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2');background-position: top; background-size: contain;">
+           
+         <button class="view-more-btn" onclick="viewWorks('graphic-design')">View Works</button>
+        </div>
+        <div class="service-card" data-service="branding" style="background-image: url('https://th.bing.com/th/id/R.2bf2549fa783312b5941919348654c8b?rik=HwlUuVqm7vWKeg&riu=http%3a%2f%2fapphocus.com%2fwp-content%2fuploads%2f2016%2f04%2fBranding-and-Logo-2.jpg&ehk=Zg%2fDuvI%2fnKRX2UvMXk85XelP5bsgpNwCojfzHi2%2bR0M%3d&risl=&pid=ImgRaw&r=0');">
+          <button class="view-more-btn" onclick="viewWorks('branding')">View Works</button>
+        </div>
+        <div class="service-card" data-service="motion-graphics" style="background-image: url('https://th.bing.com/th/id/OIP._WQYw9u_NI6bKqjzGivfdAHaEK?rs=1&pid=ImgDetMain');">
+                      <button class="view-more-btn" onclick="viewWorks('motion-graphics')">View Works</button>
+        </div>
+        <div class="service-card" data-service="web-development" style="background-image: url('https://th.bing.com/th/id/OIP.tWJBwTsb8Sc3s_1ZMzihvgHaHa?rs=1&pid=ImgDetMain');">
+                       <button class="view-more-btn" onclick="viewWorks('web-development')">View Works</button>
+        </div>
+    </div>
+
+    <!-- Works Modal -->
+    <div id="works-display" class="works-modal">
+        <div class="works-content">
+            <button class="close-modal-btn" onclick="closeWorks()">×</button>
+            <h3 id="works-title"></h3>
+            <div id="works-container">
+                <!-- Dynamic Content Will Load Here -->
+            </div>
+        </div>
+    </div>
+</section>
 
 
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: var(--light-color);
-    background-color: var(--primary-color);
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal overflow */
-}
-
-.navbar {
-    position: absolute; /* Keeps it on top of the hero section */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px; /* Adds space around navbar content */
-    top: 0;
-    left: 0;
-    width: 100%; /* Stretches navbar to the full width */
-    height: 60px; /* Adjust the height as needed */
-    background: rgba(0, 0, 0, 0); /* Transparent dark background for contrast */
-    z-index: 10; /* Keeps navbar above other elements */
-    color: white; /* White text for visibility */
-    backdrop-filter: blur(10px); /* Applies blur effect for the background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for subtle elevation */
-}
-
-/* Logo Hover Animation */
-.navbar .logo img {
-    transition: transform 0.3s ease;
-}
-
-.navbar .logo img:hover {
-    transform: rotate(360deg);
-}
-
-/* Navbar Links */
-.nav-links {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 20px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.nav-links li a:hover {
-    color: var(--accent-color);
-    transform: translateY(-3px);
-}
-
-/* Logo Styling */
-.navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--accent-color); /* Logo in accent color */
-}
-
-/* Floating CTA Button */
-.cta-btn {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    padding: 18px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-
-.cta-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* Hamburger Menu for Mobile */
-.hamburger {
-    display: none; /* Hidden by default */
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-    }
-
-/* Mobile Navigation Styling */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hidden by default */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute;
-        top: 60px; /* Position right below the navbar */
-        right: 0; /* Align the menu to the right side */
-        width: 180px; /* Smaller width for a more compact menu */
-        background: rgba(20, 20, 20, 0.95); /* Dark background */
-        padding: 10px 0; /* Small padding for neatness */
-        border-radius: 10px; /* Rounded corners */
-        box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-        opacity: 0; /* Start as invisible */
-        pointer-events: none; /* Prevent interaction when hidden */
-        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
-        z-index: 9;
-        margin-right: 20px;
-            }
-
-        .body{
-            width: 100%;
-            overflow-x: hidden;
-        }
-
-    .navbar {
-        position: absolute;
-        flex-direction: row;
-        justify-content:space-around;
-        max-width: 100%;
-        align-items: center;
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 style="color: black; font-size: 2.5rem;">Get in Touch</h2>
+        <p class="contact-description">
+            Feel free to get in touch with me for any inquiries or projects! You can reach me via email, phone, or WhatsApp. I'll be happy to assist you.
+        </p>
+        <!-- Contact Options -->
+        <div class="contact-options">
+            <div class="contact-method">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Call Me</h3>
+                <p><a href="tel:+233592129882">+233 592 129 882</a></p>
+            </div>
+            <div class="contact-method">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/+233592129882" target="_blank">Chat on WhatsApp</a></p>
+            </div>
+            <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Me</h3>
+                <p><a href="mailto:eo6619442@gmail.com">Send an Email</a></p>
+            </div>
+        </div>
+        <!-- Contact Form -->
         
-    }
-    
-    .nav-links.show {
-        display: flex; /* Show the menu when toggled */
-        opacity: 1; /* Fade in */
-        pointer-events: auto; /* Allow interaction when shown */
-        transform: translateX(0); /* Slide in from the right */
-    }
-
-    .nav-links li {
-        margin: 5px 0; /* Reduced spacing between items */
-        text-align: center;
-        width: 100%;
-    }
-
-    .nav-links li a {
-        color: white;
-        font-size: 0.7rem; /* Smaller text for compactness */
-        font-weight: 100; /* Slightly bolder text */
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 8px 0; /* Small padding */
-        transition: color 0.3s ease;
-    }
-
-    .nav-links li a:hover {
-        color: var(--accent-color); /* Accent color on hover */
-    }
-
-    /* Hire Me button styling */
-    .cta {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px; /* Reduced space between the menu and the button */
-        width: 100%;
-    }
-
-    .cta-btn {
-        background-color: var(--accent-color);
-        color: var(--primary-color);
-        padding: 10px 15px;
-        border-radius: 5px;
-        font-size: 0.9rem; /* Smaller button text */
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s, box-shadow 0.3s;
-        margin-top: -10px;
-    }
-
-
-    .cta-btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Hamburger Icon */
-    .hamburger {
-        display: block; /* Visible on mobile */
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
-        margin-left: auto; /* Align to the right */
-        padding: 10px;
-        position: relative;
-        margin-right: 30px;
-    }
-
-    /* Arrow Indicator that appears after menu is toggled */
-    .hamburger.open::after {
-        content: ''; /* Empty content */
-        position: absolute;
-        top: 100%; /* Position just below the hamburger */
-        left: 50%;
-        transform: translateX(-50%); /* Center the arrow */
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent; /* Triangle effect */
-        border-right: 5px solid transparent;
-        border-top: 8px solid rgba(20, 20, 20, 0.95); /* Small arrow */
-        margin-top: 5px; /* Small space between the hamburger and arrow */
-        transition: opacity 0.3s ease; /* Fade-in effect */
-        opacity: 0; /* Start as invisible */
-    }
-
-    .hamburger.open::after {
-        opacity: 1; /* Make the arrow visible after the hamburger is clicked */
-    }
-
-    /* Hero Section */
-    .hero {
-        display: flex;
-        flex-direction: column; /* Stack content vertically */
-        justify-content: center;
-        align-items: center; /* Center-align items */
-        text-align: center; /* Center the text */
-        width: 100vw; /* Ensure the hero section doesn't exceed the screen width */
-        overflow: hidden; /* Prevent horizontal overflow */
-        
-    }
-
-/* Hero Content */
-.hero-content {
-    max-width: 90%; /* Limit the content width for better readability */
-    margin: auto; /* Center the content */
-}
-
-/* Profile Image */
-.hero img {
-    width: 50%;
-    height: auto;
-    clip-path: circle(40%);
-}
-
-
-/* Hero Text */
-.hero-content h1 {
-    font-size: 1.5rem; /* Adjust font size for mobile */
-    margin: 10px 0;
-}
-
-.hero-content p {
-    font-size: 1rem; /* Adjust font size for the description */
-    color: #e4ecf3; /* Optional: Subtle text color */
-}
-
-/* Call to Action Button */
-.cta-btn {
-    font-size: 0.9rem; /* Adjust button font size */
-    padding: 12px 20px; /* Reduce padding for a smaller button */
-    border-radius: 5px; /* Keep the button style consistent */
-}
-
-}
-
-
-
-
-
-
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 100vh;
- background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('lake-2396602_1280.jpg') center/cover no-repeat; 
-   display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 1;
-    overflow: hidden;
-        }
-
-/* Creating the blurred effect on the background */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: blur(5px); /* Adjust blur intensity */
-    z-index: -1; /* Ensures the background is behind the content */
-}
-
-/* Hero content remains clear and unaffected by the blur */
-.hero-content {
-    position: relative;
-    z-index: 1;
-    animation: fadeIn 2s ease-in;
-}
-
-/* Profile image with bounce animation */
-.profile-img {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    border: 5px solid var(--accent-color);
-    animation: bounce 2s infinite;
-    background-color: rgba(22, 57, 75, 0.5);
-    clip-path: circle(120px);
-}
-
-/* About Section Styling */
-#about {
-    padding: 60px 20px;
-    background: linear-gradient(120deg, #101a38, #0b1424);
-    color: white;
-    font-family: 'Roboto', sans-serif;
-}
-
-.about-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-    color: var(--accent-color);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-}
-
-.about-text,
-.personal-details,
-.interests,
-.achievements {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: justify;
-    font-size: 0.95rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: var(--accent-color);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 5px;
-}
-
-p, li {
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.icon {
-    font-size: 1.2rem;
-    margin-right: 10px;
-    color: #ffcc00;
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-    .about-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-text {
-        grid-column: span 2;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-text,
-    .personal-details,
-    .interests,
-    .achievements {
-        text-align: center;
-    }
-
-    ul li {
-        justify-content: center;
-    }
-}
-
-
-
-/* Services Section */
-.services-section {
-    padding: 60px 20px;
-    background: linear-gradient(145deg, rgba(20, 20, 40, 0.8), rgba(40, 40, 60, 0.9));
-    color: white;
-    text-align: center;
-}
-
-.services-section .section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--accent-color);
-    margin-bottom: 30px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.service-card {
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    color: white;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.service-card p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
-}
-
-.view-more-btn {
-    padding: 8px 15px;
-    background: rgb(255, 217, 2);
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    align-self: center;
-}
-
-.view-more-btn:hover {
-    background: white;
-    color: black;
-}
-
-/* Modal for displaying works */
-.works-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-}
-
-.works-content {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 800px;
-    width: 90%;
-    text-align: center;
-    position: relative;
-    color: white;
-}
-
-.close-modal-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-}
-
-#works-container {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#works-container img {
-    max-width: 150px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-#works-container img:hover {
-    transform: scale(1.1);
-}
-
-
-
-.contact {
-    padding: 50px 10%;
-    background-color: #f8f9fa;
-    text-align: center;
-}
-
-.contact-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.contact-options {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.contact-method {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
-}
-
-.contact-method i {
-    font-size: 2rem;
-    color: #6c757d;
-}
-
-.contact-method h3 {
-    font-size: 1.3rem;
-    margin-top: 10px;
-    color: #333;
-}
-
-.contact-method p {
-    font-size: 1rem;
-    color: #007bff;
-}
-
-.contact-method a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.contact-method a:hover {
-    text-decoration: underline;
-}
-
-.contact-form {
-    margin-top: 10px;
-    max-width: 700px; /* Wider form for a professional look */
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffffff; /* Clean white background */
-    padding: 20px; /* Increased padding for spacing */
-    border-radius: 15px; /* Softer, more rounded edges */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Professional shadow effect */
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
-}
-
-.contact-form .form-group {
-    margin-bottom: 25px; /* Spaced out form fields */
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 15px; /* Larger padding for comfort */
-    font-size: 1.1rem; /* Slightly larger font for readability */
-    border: 1px solid #ccc; /* Subtle border */
-    border-radius: 10px; /* Rounded edges for inputs */
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft inner shadow */
-    box-sizing: border-box;
-    background-color: #f9f9f9; /* Light gray background for input fields */
-    transition: border-color 0.3s ease; /* Smooth transition for focus */
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--accent-color); /* Highlight border on focus */
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 8px rgba(239, 231, 87, 0.5); /* Add glow effect */
-}
-
-.contact-form textarea {
-    resize: none; /* Prevent resizing for a cleaner look */
-    height: 150px; /* Fixed height for the textarea */
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 18px; /* Larger padding for a bold button */
-    background-color: var(--accent-color); /* Golden orange background */
-    color: var(--primary-color); /* Dark blue text */
-    border: none; /* Clean button edges */
-    border-radius: 10px; /* Rounded button */
-    font-size: 1.4rem; /* Larger font for prominence */
-    font-weight: bold;
-    cursor: pointer; /* Pointer cursor for interactivity */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #d4b44d; /* Slightly darker hover effect */
-    transform: translateY(-3px); /* Hover float effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow on hover */
-}
-
-/* Additional Styling for Professional Touch */
-.contact-description {
-    font-size: 1.2rem; /* Slightly larger description font */
-    color: #555; /* Neutral text color */
-    margin-bottom: 40px; /* Increased spacing from form */
-    text-align: center; /* Center-aligned text */
-}
-
-.contact-options {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 30px;
-    flex-wrap: wrap; /* Wraps items on smaller screens */
-}
-
-.contact-options .contact-method {
-    flex: 1 1 calc(33.333% - 20px); /* Responsive layout for methods */
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.contact-options .contact-method:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.contact-options .contact-method i {
-    font-size: 2rem;
-    color: var(--accent-color); /* Accent-colored icons */
-    margin-bottom: 10px;
-}
-
-.contact-options .contact-method h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: var(--primary-color); /* Dark blue headings */
-}
-
-.contact-options .contact-method p a {
-    color: #007bff; /* Bright link color */
-    text-decoration: none;
-}
-
-.contact-options .contact-method p a:hover {
-    text-decoration: underline; /* Underline on hover for links */
-}
-
-.contact-form button:hover {
-    background-color: #218838;
-}
-
-.social-links {
-    margin-top: 30px;
-}
-
-.social-links a {
-    margin: 0 15px;
-    font-size: 2rem;
-    color: #555;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    color: #007bff;
-}
-
-/* Footer Section */
-/* Footer Section */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px; /* Set the max width to match other sections */
-    margin: 0 auto; /* Center the footer content */
-}
-
-.footer-logo img {
-    width: 120px;
-    margin-bottom: 20px;
-}
-
-.footer-links,
-.footer-social {
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
-    margin-bottom: 20px;
-}
-
-.footer-links h3,
-.footer-social h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #efe757;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin: 10px 0;
-}
-
-.footer-links ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-    color: #efe757;
-}
-
-.footer-social .social-links {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-social .social-links a {
-    font-size: 24px;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.footer-social .social-links a:hover {
-    color: #efe757;
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #aaa;
-}
-
- 
-
-/* Animations */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-.error {
-    border: 2px solid red;
-}
-
-
-.contact-form button:hover {
-    background-color: #218838;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer Section */
-.footer {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    padding: 40px 0;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 20px;
-}
-
-.footer .social-icons a {
-    text-decoration: none;
-    color: var(--light-color);
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
-
-.footer .social-icons a:hover {
-    color: var(--accent-color);
-}
-
-/* Smooth Scroll for Anchor Links */
-a {
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: var(--accent-color);
-}
-
-/* Form Validation and Error Styles */
-.input-error {
-    border: 1px solid red;
-}
-
-.error-message {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: 5px;
-}
-
-/* Modal Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Profile Image Bounce Animation */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-}
-
-/* Skill Bar Animation */
-@keyframes skillFill {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-
-/* Back to Top Button Styles */
-#back-to-top {
-    position: fixed; /* Sticks the button to the viewport */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    z-index: 100; /* Ensures it appears above other elements */
-    background-color: #3b4a82; /* Accent color for visibility */
-    color: #ddd0b0; /* Text color */
-    border: none; /* Removes border */
-    border-radius: 50%; /* Makes the button circular */
-    width: 40px; /* Button width */
-    height: 40px; /* Button height */
-    font-size: 20px; /* Icon or text size */
-    text-align: center; /* Centers the content */
-    line-height: 30px; /* Aligns text vertically */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8); /* Shadow for the suspended effect */
-    opacity: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: scale(1); /* Normal size */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-       
-}
-
-/* Show the button when scrolled */
-#back-to-top.show {
-    opacity: 1; /* Ensure visibility */
-    transform: scale(1); /* Reset scaling */
-}
-
-/* Hover effect */
-#back-to-top:hover {
-    background-color: #78716e; /* Slightly darker accent */
-    color: #eae2e2; /* Change text color for hover */
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {  
-    /* Adjust Profile Image in Hero Section */
-    
-    
-    /* About Section */
-    .about-section {
-        padding: 50px 10px;
-        height: auto;
-    }
-
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-            }
-
-    .about-left, .about-right {
-        width: 100%;
-        text-align: center;
-    }
-
-    .about-left img {
-        width: 100%;
-        margin-bottom: 20px;
-        clip-path: circle(70px);
-        margin-bottom: -100px;
-        margin-top: -50px;
-    }
-
-    .skill-cta {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 20px;
-        flex-direction: column;
-        margin-top: 50px;
-
-    }
-    /* Services Section */
-    .services-grid {
-        grid-template-columns: 1fr; /* Stack the services vertically */
-    }
-
-    .service-card {
-        margin-bottom: 30px;
-    }
-
-    /* Contact Form */
-    .contact-form {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .contact-form input, .contact-form textarea {
-        width: 100%;
-        padding: 12px;
-        font-size: 1rem;
-    }
-
-    /* Footer */
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links, .footer-social {
-        min-width: auto;
-        max-width: none;
-    }
-
-    /* Back to Top Button */
-    #back-to-top {
-        bottom: 30px;
-        right: 30px;
-    }
-}
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/your-profile" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="IEC-01.svg" alt="Logo" height="60px">
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#myworks">My Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Emmanuel Owusu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#"><button id="back-to-top" title="Go to top" class="back-to-top">↑</button></a>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
