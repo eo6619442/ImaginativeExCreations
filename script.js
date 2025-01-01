@@ -47,3 +47,25 @@ const navbar = document.querySelector('.navbar ul');
 hamburger.addEventListener('click', () => {
   navbar.classList.toggle('active');
 });
+
+// JavaScript to toggle the hamburger menu
+function toggleMenu() {
+    // Select the navigation links container
+    const navLinks = document.querySelector('.nav-links');
+
+    // Toggle the 'show' class to either display or hide the menu
+    navLinks.classList.toggle('show');
+}
+
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+
+    // Toggle the menu visibility
+    navLinks.classList.toggle('show');
+
+    // Toggle the "open" class to show the arrow under the hamburger
+    hamburger.classList.toggle('open');
+}
+
+
